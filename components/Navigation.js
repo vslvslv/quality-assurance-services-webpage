@@ -23,7 +23,7 @@ export default function Navigation() {
             Experience
           </a>
           <a href="#contact" className="px-6 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:shadow-lg transition">
-            Let's Talk
+            Let&apos;s Talk
           </a>
         </div>
 

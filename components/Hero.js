@@ -33,7 +33,7 @@ export default function Hero() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
             <a href="#contact" className="group relative px-8 py-4 font-semibold text-white overflow-hidden rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 transition transform hover:scale-105">
-              Let's Talk
+              Let&apos;s Talk
             </a>
             <a href="#services" className="px-8 py-4 font-semibold text-white border-2 border-purple-400 rounded-lg hover:bg-purple-400/10 transition">
               Explore Services

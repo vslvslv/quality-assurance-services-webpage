@@ -49,10 +49,10 @@ export default function Contact() {
           {/* Content */}
           <div className="text-white space-y-6">
             <h2 className="text-5xl md:text-6xl font-black leading-tight">
-              Let's Work Together
+              Let&apos;s Work Together
             </h2>
             <p className="text-xl text-gray-300">
-              Ready to elevate your QA process? I'd love to discuss how I can help ensure your product ships with confidence.
+              Ready to elevate your QA process? I&apos;d love to discuss how I can help ensure your product ships with confidence.
             </p>
             <div className="space-y-4 pt-4">
               <div className="flex items-start gap-4">
@@ -78,7 +78,7 @@ export default function Contact() {
               <div className="text-center py-12 space-y-4 animate-fade-in">
                 <div className="text-6xl">✨</div>
                 <h3 className="text-2xl font-bold text-white">Thank you!</h3>
-                <p className="text-gray-300">I'll get back to you within 24 hours.</p>
+                <p className="text-gray-300">I&apos;ll get back to you within 24 hours.</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
