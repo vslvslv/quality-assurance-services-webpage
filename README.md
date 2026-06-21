@@ -12,7 +12,7 @@ A professional portfolio website to showcase quality assurance services.
 
 ### Prerequisites
 
-- Node.js 18+ installed
+- Node.js 22+ installed
 
 ### Local Development
 
