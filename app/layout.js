@@ -1,12 +1,14 @@
 import './globals.css';
 
-const SITE_URL = 'https://vslvslv.github.io/quality-assurance-services-webpage';
+const ORIGIN = 'https://vslvslv.github.io';
+const SITE_URL = `${ORIGIN}/quality-assurance-services-webpage`;
+const OG_IMAGE = `${SITE_URL}/og.png`;
 const TITLE = 'Vasil Vasilev — QA Services & Test Automation';
 const DESCRIPTION =
   'QA engineering and leadership with 15+ years across enterprise, fintech, and SaaS. Test automation, performance and API testing, test strategy, and CI/CD quality gates.';
 
 export const metadata = {
-  metadataBase: new URL(SITE_URL),
+  metadataBase: new URL(ORIGIN),
   title: TITLE,
   description: DESCRIPTION,
   keywords: [
@@ -30,11 +32,13 @@ export const metadata = {
     siteName: 'Vasil Vasilev — QA Services',
     title: TITLE,
     description: DESCRIPTION,
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: TITLE }],
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
     title: TITLE,
     description: DESCRIPTION,
+    images: [OG_IMAGE],
   },
 };
 
