@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Logo from './Logo';
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,9 +9,10 @@ export default function Navigation() {
   return (
     <nav className="fixed top-0 z-50 w-full bg-white/80 backdrop-blur-xl border-b border-gray-200/20 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-        <div className="text-2xl font-black bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-          VV QA
-        </div>
+        <a href="#" className="flex items-center gap-2 hover:opacity-80 transition">
+          <Logo />
+          <span className="font-bold text-gray-900">Vasil Vasilev</span>
+        </a>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex gap-8 items-center">
