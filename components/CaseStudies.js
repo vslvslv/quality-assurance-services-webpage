@@ -4,27 +4,35 @@ export default function CaseStudies() {
   const cases = [
     {
       title: 'Enterprise Infrastructure',
-      company: 'VMware - Senior QA Automation Engineer',
+      company: 'VMware — Senior QA Automation Engineer',
       description:
-        'Designed and implemented comprehensive automation frameworks for virtualization infrastructure testing. Built CI/CD integration pipelines, mentored junior engineers, and established QA best practices across teams.',
-      metrics: ['Complex infrastructure testing', 'CI/CD pipeline optimization', 'Team mentorship'],
+        'Drove quality across core virtualization products—vSphere, VMware Cloud Foundation (VCF), and ESXi—including version-upgrade testing. Owned quality for the initiative delivering a tool that migrates corporate customers’ environments to newer versions.',
+      metrics: ['vSphere · VCF · ESXi quality', 'Version-upgrade testing', 'Quality owner — customer migration tool'],
       icon: '🏢',
     },
     {
-      title: 'FinTech Growth',
-      company: 'Tiebreak - QA Technical Lead & Manager',
+      title: 'QA Leadership at Scale',
+      company: 'Tiebreak — QA Technical Lead & Manager',
       description:
-        'Led QA strategy and team expansion for a financial services platform. Scaled QA operations, implemented automation frameworks, and established quality standards while managing multiple testing initiatives.',
-      metrics: ['Team leadership', 'Strategy & roadmap', 'Quality standards'],
+        'Built and led a ~15-person QA team, personally recruiting and onboarding over half of it. Led the initiative to build corporate-grade automation and drove the Manual → Automation QA transition, owning quality across the full product portfolio.',
+      metrics: ['~15-person team — 50%+ hired & onboarded', '5,000+ automated tests — API · Web · Mobile E2E', 'Quality across 10+ products'],
       icon: '🚀',
     },
     {
-      title: 'Fast-Paced SaaS',
-      company: 'Nexo - Senior QA Automation Engineer',
+      title: 'QA Team Leadership',
+      company: 'Soft2Run — QA Team Lead',
       description:
-        'Built robust automation test suites and CI/CD integration for cryptocurrency/finance platform. Collaborated with dev teams on rapid releases while maintaining quality and performance standards.',
-      metrics: ['Rapid release cycles', 'Automation at scale', 'Cross-team collaboration'],
-      icon: '⚡',
+        'Led a 10-member QA team at a product company supporting outsourcing engagements. Owned test planning, process, and delivery quality across client and in-house products.',
+      metrics: ['10-person QA team', 'Product & outsourcing delivery', 'Process & quality ownership'],
+      icon: '👥',
+    },
+    {
+      title: 'Enterprise Web Platforms',
+      company: 'Sirma — QA Automation Engineer',
+      description:
+        'Built and maintained automated test coverage for large-scale enterprise web platforms, ensuring reliability across complex business workflows.',
+      metrics: ['Enterprise web platform testing', 'Automation framework development', 'Complex workflow coverage'],
+      icon: '🌐',
     },
   ];
 
@@ -41,11 +49,11 @@ export default function CaseStudies() {
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            15+ years across gaming, fintech, enterprise infrastructure, and SaaS—from QA engineer to technical leader
+            15+ years across gaming, fintech, enterprise infrastructure, and web platforms—from QA automation engineer to technical lead and manager
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           {cases.map((caseStudy, idx) => (
             <div
               key={idx}
