@@ -4,6 +4,11 @@ import { useState } from 'react';
 
 const CONTACT_EMAIL = 'vasilvasilev89@outlook.com';
 
+// Free access key from https://web3forms.com (enter CONTACT_EMAIL there; the key
+// is emailed to you). It's a public, client-side key — safe to commit. It only
+// allows delivery to the address the key was registered with.
+const WEB3FORMS_ACCESS_KEY = '2897ecc4-5b6c-420d-92cb-0a3e123692c1';
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
@@ -11,6 +16,8 @@ export default function Contact() {
     description: '',
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -20,20 +27,38 @@ export default function Contact() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true);
+    setError('');
 
-    const subject = encodeURIComponent(`QA inquiry from ${formData.name}`);
-    const body = encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.description}`
-    );
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: `QA inquiry from ${formData.name}`,
+          from_name: formData.name,
+          name: formData.name,
+          email: formData.email,
+          message: formData.description,
+        }),
+      });
+      const data = await res.json();
 
-    // Static site (no backend): open the visitor's mail client pre-filled.
-    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
-
-    setIsSubmitted(true);
-    setFormData({ name: '', email: '', description: '' });
-    setTimeout(() => setIsSubmitted(false), 8000);
+      if (data.success) {
+        setIsSubmitted(true);
+        setFormData({ name: '', email: '', description: '' });
+        setTimeout(() => setIsSubmitted(false), 8000);
+      } else {
+        setError(data.message || 'Something went wrong. Please email me directly.');
+      }
+    } catch {
+      setError('Network error — please email me directly.');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -79,15 +104,8 @@ export default function Contact() {
             {isSubmitted ? (
               <div className="text-center py-12 space-y-4 animate-fade-in">
                 <div className="text-6xl">✨</div>
-                <h3 className="text-2xl font-bold text-white">Almost there!</h3>
-                <p className="text-gray-300">
-                  Your email client should have opened with the message ready to send. If it didn&apos;t,
-                  email me directly at{' '}
-                  <a href={`mailto:${CONTACT_EMAIL}`} className="text-purple-400 hover:underline">
-                    {CONTACT_EMAIL}
-                  </a>
-                  .
-                </p>
+                <h3 className="text-2xl font-bold text-white">Thank you!</h3>
+                <p className="text-gray-300">Your message was sent — I&apos;ll get back to you within 24 hours.</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -133,11 +151,28 @@ export default function Contact() {
                   />
                 </div>
 
+                {error && (
+                  <p className="text-sm text-red-300" role="alert">
+                    {error}{' '}
+                    <a href={`mailto:${CONTACT_EMAIL}`} className="underline hover:text-red-200">
+                      {CONTACT_EMAIL}
+                    </a>
+                  </p>
+                )}
+
                 <button
                   type="submit"
-                  className="w-full py-4 px-6 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-bold rounded-lg transition transform hover:scale-105 flex items-center justify-center gap-2"
+                  disabled={isLoading}
+                  className="w-full py-4 px-6 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-bold rounded-lg transition transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                 >
-                  Send Message
+                  {isLoading ? (
+                    <>
+                      <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                      Sending...
+                    </>
+                  ) : (
+                    'Send Message'
+                  )}
                 </button>
               </form>
             )}
