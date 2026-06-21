@@ -39,13 +39,13 @@ export default function Navigation() {
       {isOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-white border-t border-gray-200 py-4">
           <div className="flex flex-col gap-4 px-4">
-            <a href="#services" className="text-gray-700 font-semibold hover:text-purple-600">
+            <a href="#services" onClick={() => setIsOpen(false)} className="text-gray-700 font-semibold hover:text-purple-600">
               Services
             </a>
-            <a href="#cases" className="text-gray-700 font-semibold hover:text-purple-600">
+            <a href="#cases" onClick={() => setIsOpen(false)} className="text-gray-700 font-semibold hover:text-purple-600">
               Experience
             </a>
-            <a href="#contact" className="text-gray-700 font-semibold hover:text-purple-600">
+            <a href="#contact" onClick={() => setIsOpen(false)} className="text-gray-700 font-semibold hover:text-purple-600">
               Contact
             </a>
           </div>

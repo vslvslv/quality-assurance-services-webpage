@@ -28,7 +28,7 @@ export default function Hero() {
           </p>
 
           <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-            From test strategy and automation to security audits and performance optimization—I ensure your product launches with confidence.
+            From test strategy and automation to performance and API testing—I ensure your product launches with confidence.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
