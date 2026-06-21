@@ -1,0 +1,102 @@
+[    1961ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/quality-assurance-services-webpage:0
+[    2083ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ webpack-internal:///./node_modules/react-dom/cjs/react-dom.development.js:29889
+[    2104ms] Error: Module not found: Can't resolve '@/components/Hero'
+  1 | 'use client';
+  2 |
+> 3 | import Hero from '@/components/Hero';
+    | ^
+  4 | import Services from '@/components/Services';
+  5 | import CaseStudies from '@/components/CaseStudies';
+  6 | import Contact from '@/components/Contact';
+
+https://nextjs.org/docs/messages/module-not-found
+
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at getNotFoundError (file:///Users/vasilvasilev/Repositories/quality-assurance-services-webpage/node_modules/next/dist/build/webpack/plugins/wellknown-errors-plugin/parseNotFoundError.js:124:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async getModuleBuildError (file:///Users/vasilvasilev/Repositories/quality-assurance-services-webpage/node_modules/next/dist/build/webpack/plugins/wellknown-errors-plugin/webpackModuleError.js:104:27)
+    at async (file:///Users/vasilvasilev/Repositories/quality-assurance-services-webpage/node_modules/next/dist/build/webpack/plugins/wellknown-errors-plugin/index.js:29:49)
+    at async (file:///Users/vasilvasilev/Repositories/quality-assurance-services-webpage/node_modules/next/dist/build/webpack/plugins/wellknown-errors-plugin/index.js:27:21)
+[    2102ms] [LOG] [HMR] connected @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/pages/websocket.js:38
+[    2103ms] [ERROR] ./app/page.js:3:1
+Module not found: Can't resolve '@/components/Hero'
+  1 | 'use client';
+  2 |
+> 3 | import Hero from '@/components/Hero';
+    | ^
+  4 | import Services from '@/components/Services';
+  5 | import CaseStudies from '@/components/CaseStudies';
+  6 | import Contact from '@/components/Contact';
+
+https://nextjs.org/docs/messages/module-not-found @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/hydration-error-info.js:62
+[    2103ms] [ERROR] ./app/page.js:4:1
+Module not found: Can't resolve '@/components/Services'
+  2 |
+  3 | import Hero from '@/components/Hero';
+> 4 | import Services from '@/components/Services';
+    | ^
+  5 | import CaseStudies from '@/components/CaseStudies';
+  6 | import Contact from '@/components/Contact';
+  7 | import Navigation from '@/components/Navigation';
+
+https://nextjs.org/docs/messages/module-not-found @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/hydration-error-info.js:62
+[    2103ms] [ERROR] ./app/page.js:5:1
+Module not found: Can't resolve '@/components/CaseStudies'
+  3 | import Hero from '@/components/Hero';
+  4 | import Services from '@/components/Services';
+> 5 | import CaseStudies from '@/components/CaseStudies';
+    | ^
+  6 | import Contact from '@/components/Contact';
+  7 | import Navigation from '@/components/Navigation';
+  8 | import Footer from '@/components/Footer';
+
+https://nextjs.org/docs/messages/module-not-found @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/hydration-error-info.js:62
+[    2103ms] [ERROR] ./app/page.js:6:1
+Module not found: Can't resolve '@/components/Contact'
+  4 | import Services from '@/components/Services';
+  5 | import CaseStudies from '@/components/CaseStudies';
+> 6 | import Contact from '@/components/Contact';
+    | ^
+  7 | import Navigation from '@/components/Navigation';
+  8 | import Footer from '@/components/Footer';
+  9 |
+
+https://nextjs.org/docs/messages/module-not-found @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/hydration-error-info.js:62
+[    2103ms] [ERROR] ./app/page.js:7:1
+Module not found: Can't resolve '@/components/Navigation'
+   5 | import CaseStudies from '@/components/CaseStudies';
+   6 | import Contact from '@/components/Contact';
+>  7 | import Navigation from '@/components/Navigation';
+     | ^
+   8 | import Footer from '@/components/Footer';
+   9 |
+  10 | export default function Home() {
+
+https://nextjs.org/docs/messages/module-not-found @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/hydration-error-info.js:62
+[    2103ms] [ERROR] ./app/page.js:8:1
+Module not found: Can't resolve '@/components/Footer'
+   6 | import Contact from '@/components/Contact';
+   7 | import Navigation from '@/components/Navigation';
+>  8 | import Footer from '@/components/Footer';
+     | ^
+   9 |
+  10 | export default function Home() {
+  11 |   return (
+
+https://nextjs.org/docs/messages/module-not-found @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/hydration-error-info.js:62
+[    2105ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/favicon.ico:0
+[   30568ms] [ERROR] WebSocket connection to 'ws://localhost:3000/quality-assurance-services-webpage/_next/webpack-hmr' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/pages/websocket.js:63
+[   31570ms] [ERROR] WebSocket connection to 'ws://localhost:3000/quality-assurance-services-webpage/_next/webpack-hmr' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/pages/websocket.js:63
+[   32732ms] [LOG] [HMR] connected @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/pages/websocket.js:38
+[   32753ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/pages/hot-reloader-client.js:221
+[   32989ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/pages/hot-reloader-client.js:221
+[   33451ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/pages/hot-reloader-client.js:221
+[   33524ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/pages/hot-reloader-client.js:347
+[   33762ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:38559
