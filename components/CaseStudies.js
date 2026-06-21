@@ -3,28 +3,28 @@
 export default function CaseStudies() {
   const cases = [
     {
-      title: 'Enterprise Scale-Up',
-      company: 'Fortune 500 Financial Services',
+      title: 'Enterprise Infrastructure',
+      company: 'VMware - Senior QA Automation Engineer',
       description:
-        'Led QA strategy for a mission-critical payment processing system. Implemented comprehensive test automation reducing regression testing time by 70% and achieving 99.9% uptime.',
-      metrics: ['70% faster testing', '99.9% uptime', '500+ automated tests'],
+        'Designed and implemented comprehensive automation frameworks for virtualization infrastructure testing. Built CI/CD integration pipelines, mentored junior engineers, and established QA best practices across teams.',
+      metrics: ['Complex infrastructure testing', 'CI/CD pipeline optimization', 'Team mentorship'],
       icon: '🏢',
     },
     {
-      title: 'Rapid Growth SaaS',
-      company: 'Series B Tech Startup',
+      title: 'FinTech Growth',
+      company: 'Tiebreak - QA Technical Lead & Manager',
       description:
-        'Scaled QA operations from manual to fully automated CI/CD pipeline. Supported 10x user growth while maintaining quality standards and reducing critical bugs by 85%.',
-      metrics: ['10x scaling', '85% bug reduction', 'zero deployment rollbacks'],
+        'Led QA strategy and team expansion for a financial services platform. Scaled QA operations, implemented automation frameworks, and established quality standards while managing multiple testing initiatives.',
+      metrics: ['Team leadership', 'Strategy & roadmap', 'Quality standards'],
       icon: '🚀',
     },
     {
-      title: 'Product Launch',
-      company: 'Early-Stage Marketplace',
+      title: 'Fast-Paced SaaS',
+      company: 'Nexo - Senior QA Automation Engineer',
       description:
-        'Designed and executed comprehensive testing strategy for MVP launch. Coordinated cross-team quality efforts, resulting in successful production launch with zero critical issues.',
-      metrics: ['Clean launch', 'Real-time coordination', '100% requirements coverage'],
-      icon: '⭐',
+        'Built robust automation test suites and CI/CD integration for cryptocurrency/finance platform. Collaborated with dev teams on rapid releases while maintaining quality and performance standards.',
+      metrics: ['Rapid release cycles', 'Automation at scale', 'Cross-team collaboration'],
+      icon: '⚡',
     },
   ];
 
@@ -41,7 +41,7 @@ export default function CaseStudies() {
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            15+ years delivering QA excellence across enterprises, scale-ups, and startups
+            15+ years across gaming, fintech, enterprise infrastructure, and SaaS—from QA engineer to technical leader
           </p>
         </div>
 

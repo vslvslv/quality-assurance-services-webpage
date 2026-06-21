@@ -7,44 +7,44 @@ export default function Services() {
 
   const services = [
     {
-      icon: '🧪',
-      title: 'Manual Testing',
-      description: 'Comprehensive functional, regression, and exploratory testing with meticulous attention to user experience.',
-    },
-    {
       icon: '⚙️',
       title: 'Test Automation',
-      description: 'Scalable automation frameworks (Selenium, Playwright, Cypress) for continuous integration pipelines.',
+      description: 'Build scalable automation frameworks with Selenium, Playwright, and Cypress. Design maintainable test suites for continuous integration pipelines.',
+    },
+    {
+      icon: '🧪',
+      title: 'Manual Testing',
+      description: 'Comprehensive functional, regression, and exploratory testing with meticulous attention to user experience and edge cases.',
     },
     {
       icon: '⚡',
       title: 'Performance Testing',
-      description: 'Load, stress, and endurance testing to ensure your application scales reliably under pressure.',
-    },
-    {
-      icon: '🔒',
-      title: 'Security Testing',
-      description: 'Penetration testing, vulnerability assessments, and OWASP compliance audits.',
+      description: 'Load, stress, and endurance testing to ensure your application scales reliably under pressure with optimal response times.',
     },
     {
       icon: '🔌',
       title: 'API Testing',
-      description: 'RESTful and GraphQL API validation, contract testing, and integration verification.',
+      description: 'RESTful and GraphQL API validation, contract testing, integration verification, and end-to-end workflow testing.',
     },
     {
       icon: '📱',
       title: 'Mobile Testing',
-      description: 'iOS and Android testing across devices, OS versions, and various network conditions.',
+      description: 'iOS and Android testing across devices, OS versions, screen sizes, and various network conditions with real device testing.',
     },
     {
       icon: '📊',
-      title: 'Test Strategy',
-      description: 'Develop comprehensive testing strategies, test plans, and quality metrics for your organization.',
+      title: 'Test Strategy & Planning',
+      description: 'Develop comprehensive testing strategies, test plans, QA roadmaps, and quality metrics aligned with business objectives.',
+    },
+    {
+      icon: '👥',
+      title: 'QA Team Leadership',
+      description: 'Build and mentor high-performing QA teams. Establish processes, best practices, and quality standards across organizations.',
     },
     {
       icon: '🚀',
       title: 'CI/CD Integration',
-      description: 'Implement and optimize automated testing in your deployment pipeline for faster releases.',
+      description: 'Implement and optimize automated testing in deployment pipelines. Reduce time-to-market with efficient quality gates.',
     },
   ];
 
@@ -62,7 +62,7 @@ export default function Services() {
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            End-to-end QA solutions tailored to your product and organization
+            End-to-end QA solutions from automation engineering to QA leadership
           </p>
         </div>
 
